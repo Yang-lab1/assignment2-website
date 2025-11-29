@@ -14,8 +14,7 @@ st.title("🗺️ 《儒林外史》空间叙事分析")
 st.markdown("CHC5904 Assignment 2 - Option 2: Spatial Analysis of 'The Scholars'")
 
 # --- 2. 定义文件路径 ---
-# 请确保这个路径是正确的
-excel_file = "city_data.xlsx"
+excel_file = "city_analysis_result.xlsx"
 
 # --- 3. 定义地点的经纬度 ---
 coordinates = {
@@ -154,4 +153,5 @@ else:
         if not city_data.empty:
             with st.expander(f"📖 查看【{city}】的相关原文 ({len(city_data)} 条)"):
                 for idx, row in city_data.iterrows():
+
                     st.markdown(f"**[{row['文件名']}]**: ...{row['原文摘录']}...")
